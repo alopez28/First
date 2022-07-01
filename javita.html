@@ -14,6 +14,8 @@
     console.log(estaciones);
     estaciones.shift();
     console.log(estaciones);
+    //push//agregar al final del elemento
+    //shift//elimina el primer elemento el arreglo
     
     var compras=[["laptop",1], ["parlantes", 2], ["rams", 1], ["bicicleta", 2]];
     console.log("ya compre mi "+compras[0][0] + " " + compras[0][1] + " unidad" )
@@ -24,8 +26,7 @@
     }
     sumar(9,5);
     sumar(9,599);
-    
-    
+        
     //variables GLOBALES se usan en CUALQUIER LUGAR del propgrama
     //se usan FUERA e la funcion
     //variables LOCALES se muestran dentro de una funcion
@@ -34,6 +35,74 @@
     function sumarR(a, b){
         return a + b; //estamos retornando un valor no MOSTRANDOLO
     }
-    console.log(sumarR(5, 3));
+    console.log(sumarR(5, 3));//estamos mostrando
+    //la funciion sumarR la cual le da los parametros 5 y 3
+    //los que a su vez retornaran la suma
     
+
+    function proximoEnLaFila(arreglo, elemento){
+        arreglo.push(elemento);//AGREGAR AL FINAL
+        return arreglo.shift();//REMOVER EL PRIMERO
+    }
+    var miArray =[1, 2, 3, 4, 5];
+    console.log("antes: "+ JSON.stringify(miArray)); //LA FUNCION stringify muestra el estado del arreglo, convierte el arreglo en una cadena
+    console.log(proximoEnLaFila(miArray, 6));
+    console.log("Despues: " + JSON.stringify(miArray));
+
+    console.log("operadores de igualdad");
+    console.log("hola" == "Hola");
+    console.log("5" == 5);//true
+    console.log(90 == 90);//opperador igualdad
+    console.log("5" === 5);//operador igualdad estricta
+    console.log(90 === 90);//aqui importa tambien el TIPO de dato
+
+    function clasificarValor(valor){
+        if(valor % 2 == 0){
+            console.log("divisible entre 2");
+        }else if (valor % 3 == 0) {
+            console.log("divisible entre 3")
+        }else{
+            console.log("no es divisible entre 2 o 3")
+        }
+    }
+    console.log("20 es divisible entre: ");
+    clasificarValor(20)
+
+    function clasificarValor2(valor){
+        var respuesta;
+        switch(valor){
+            case 1:
+                respuesta="alpha";
+                break;
+            case 2:
+                respuesta="beta";
+                break;
+            case 3:
+                respuesta="gamma";
+                break;
+        }
+        return respuesta
+    }
+    console.log(clasificarValor2(1))
+
+    //objetos
+    var miPerro ={
+        "nombre": "poroto",
+        "edad": 5,
+        "peso": 6,
+        "raza":"chusquito",
+        "numero de patas": 4
+    };
+    console.log(miPerro.nombre); 
+    console.log(miPerro["numero de patas"]); 
+    var opciones = {
+        1:"alberja",
+        2:"lechuga",
+        3:"limon",
+        4:"linaza"
+    };
+
+    var posicion =2
+    console.log(opciones[posicion]);
+
     </script>
