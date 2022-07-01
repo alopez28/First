@@ -1,0 +1,51 @@
+<script>
+    console.log("hola mundo")
+    
+    const quotient = 66 / 0;
+    var a,b;
+    a=2
+    b=10
+    var respuesta = a/b
+    console.log(respuesta);
+    
+    var estaciones;
+    estaciones = ["verano","otono","invierno","primavera"];
+    estaciones.pop();
+    console.log(estaciones);
+    estaciones.shift();
+    console.log(estaciones);
+    
+    var compras=[["laptop",1], ["parlantes", 2], ["rams", 1], ["bicicleta", 2]];
+    console.log("ya compre mi "+compras[0][0] + " " + compras[0][1] + " unidad" )
+    
+    function sumar(a,b){ //esto es una FUNCION
+        var suma = a + b;
+        console.log("El resultado de " + a + " + "+ b + " = " + suma);
+    }
+    sumar(9,5);
+    sumar(9,599);
+    
+    
+    //variables GLOBALES se usan en CUALQUIER LUGAR del propgrama
+    //se usan FUERA e la funcion
+    //variables LOCALES se muestran dentro de una funcion
+    //fuera de esa funcion no tendra definicion
+    
+    function sumarR(a, b){
+        return a + b; //estamos retornando un valor no MOSTRANDOLO
+    }
+    console.log(sumarR(5, 3));
+    
+    function sumarR(a, b){
+        return a + b; //estamos retornando un valor no MOSTRANDOLO
+    }
+    console.log(sumarR(5, 3));
+    function sumarR(a, b){
+        return a + b; //estamos retornando un valor no MOSTRANDOLO
+    }
+    console.log(sumarR(5, 3));function sumarR(a, b){
+        return a + b; //estamos retornando un valor no MOSTRANDOLO
+    }
+    console.log(sumarR(5, 3));
+    
+    </script>
