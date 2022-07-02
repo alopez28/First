@@ -85,7 +85,9 @@
     }
     console.log(clasificarValor2(1))
 
-    //objetos
+
+
+    //objetos//hasOwnProperty importante
     var miPerro ={
         "nombre": "poroto",
         "edad": 5,
@@ -94,7 +96,25 @@
         "numero de patas": 4
     };
     console.log(miPerro.nombre); 
-    console.log(miPerro["numero de patas"]); 
+    console.log("mnumero de patas " + miPerro["numero de patas"]); 
+    miPerro.edad = 10;//modificar un dato
+    console.log(miPerro.edad);
+    miPerro.castrado = "no"; //agregamos nuevo dato
+    console.log(miPerro.castrado);//delete miPerro.castrado ... eliminamos dato
+
+    console.log(miPerro.hasOwnProperty("nombre"));//hasOwnProperty verifica si esa propiedad esta en los atributos del objeto
+    console.log(miPerro.hasOwnProperty("apellido"));
+
+    function verificarPropiedad(obj, propiedad){
+        if(obj.hasOwnProperty(propiedad)){
+        return "Propiedad: " + miPerro[propiedad]
+        } else{
+            return"el objeto no tiene esta propiedad"
+        }
+    }
+    console.log(verificarPropiedad(miPerro, "nombre"));
+    console.log(verificarPropiedad(miPerro, "apellido"));
+
     var opciones = {
         1:"alberja",
         2:"lechuga",
@@ -104,5 +124,16 @@
 
     var posicion =2
     console.log(opciones[posicion]);
+
+
+    //OBJETOS MAS COMPLEJOS
+    var comanda = [
+        {
+            "plato": "chicharron"
+            "tipo" :""
+        }
+    ]
+
+
 
     </script>
