@@ -121,19 +121,59 @@
         3:"limon",
         4:"linaza"
     };
-
     var posicion =2
     console.log(opciones[posicion]);
 
-
-    //OBJETOS MAS COMPLEJOS
-    var comanda = [
+    //OBJETOS MAS COMPLEJOS, objetos dentro de otros objetos [] son objetos anidados por ejemplo las GUARNICIONES en la comanda
+    var comanda =[
         {
-            "plato": "chicharron"
-            "tipo" :""
+            "plato": "chicharron mixto",
+            "despacho" : "cocina",
+            "precio" : 35.00,
+            "tipo" : "fritura",
+            "consta" : "carne de pollo y cerdo",
+            "guarnicion" : [
+                "papa dorada",
+                "zarza criolla",
+                "maiz cancha"
+            ],
+            "para llevar" : false
+        },
+        {
+            "plato" : "combinado",
+            "despacho" : "cocina",
+            "tipo" : "criollo",
+            "precio" : 30.00,
+            "consta" : "picante a la tacneña y arroz verde con presa de pato",
+            "para llevar" : false
+        },//este es el ejemplo de objetos anidados, que no es con []sino con llaves
+        {
+            "nombre" : "ceviche",
+            "descripcion" : "marino",
+            "ingredientes" : {
+                "pescado" : {
+                    "perico" : "parte sin fibra",
+                    "reyneta" : "todo",
+                    "corvina" : "todo"
+                },
+                "verduras" : {
+                    "limon" : 3,
+                    "ajo" : "1/4 cucharadita",
+                    "ajinomoto" : "1/4 cucharadita",
+                    "sal" : "1/2 cucharadita",
+                    "salsa picante" : "al gusto",
+                    "pescado molido" : "al gusto"
+                }
+            },
         }
     ]
+    console.log(comanda[0],comanda[1].tipo);
+    //ESTO es importante cuando trabajemos con JSON
+    console.log(comanda[2].ingredientes.pescado.perico);
+    console.log(comanda[2].ingredientes.verduras.limon);
 
+    var pedido = comanda[0].guarnicion[2];
+    console.log(pedido);
 
 
     </script>
